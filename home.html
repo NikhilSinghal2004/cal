@@ -3,36 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Tools</title>
+    <title>Student Helping Hand</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             text-align: center;
-            background-color: #f4f4f4;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            margin-top: 30px;
+            font-size: 36px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         }
         .container {
             margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
         }
         .icon {
-            display: inline-block;
-            width: 150px;
-            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 180px;
+            height: 180px;
             padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s;
-            cursor: pointer;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: black;
         }
         .icon:hover {
             transform: scale(1.1);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
         }
         img {
             width: 80px;
             height: 80px;
+            margin-bottom: 10px;
         }
         p {
-            font-size: 18px;
+            font-size: 20px;
             font-weight: bold;
         }
     </style>
@@ -41,15 +59,14 @@
     <h1>Student Helping Hand</h1>
     <div class="container">
         <a href="/index.html" class="icon">
-            <img src="gpa_icon.png" alt="GPA Calculator">
             <p>GPA Calculator</p>
         </a>
         <a href="attendance_calculator.html" class="icon">
-            <img src="attendance_icon.png" alt="Attendance Calculator">
+            <!-- <img src="attendance_icon.png" alt="Attendance Calculator"> -->
             <p>Attendance Calculator</p>
         </a>
         <a href="marks_calculator.html" class="icon">
-            <img src="marks_icon.png" alt="Marks Calculator">
+            <!-- <img src="marks_icon.png" alt="Marks Calculator"> -->
             <p>Marks Calculator</p>
         </a>
     </div>
