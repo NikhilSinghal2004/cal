@@ -5,7 +5,7 @@ function addSubject() {
     row.innerHTML = `
         <td>Subject ${table.rows.length}</td>
         <td><input type="number" min="0" max="100" class="marks" placeholder="Marks" oninput="updateGrade(this)"></td>
-        <td><input type="number" min="1" class="credits" placeholder="Credits"></td>
+        <td><input type="number" min="1" class="credits" placeholder="Credits" oninput="updateGrade(this)"></td>
         <td class="grade">-</td>
         <td><button class="delete-btn" onclick="deleteRow(this)">❌ Remove</button></td>
     `;
@@ -16,7 +16,6 @@ function deleteRow(button) {
     row.remove();
 }
 
-// Function to convert marks (out of 100) to a 10-point GPA
 function getGradePoint(marks) {
     if (marks >= 90) return 10.0;
     if (marks >= 80) return 9.0;
@@ -27,7 +26,6 @@ function getGradePoint(marks) {
     return 0.0;
 }
 
-// Function to get the letter grade
 function getLetterGrade(marks, credits) {
     if ((credits === 4 && marks > 85) || (credits !== 4 && marks > 90)) return "O";
     if (marks >= 80) return "A+";
@@ -38,15 +36,14 @@ function getLetterGrade(marks, credits) {
     return "F";
 }
 
-
-// Update grade in table when marks are entered
 function updateGrade(input) {
     let row = input.parentElement.parentElement;
-    let marks = parseFloat(input.value);
+    let marks = parseFloat(row.querySelector(".marks").value);
+    let credits = parseFloat(row.querySelector(".credits").value);
     let gradeCell = row.querySelector(".grade");
 
-    if (!isNaN(marks) && marks >= 0 && marks <= 100) {
-        gradeCell.textContent = getLetterGrade(marks);
+    if (!isNaN(marks) && marks >= 0 && marks <= 100 && !isNaN(credits) && credits > 0) {
+        gradeCell.textContent = getLetterGrade(marks, credits);
     } else {
         gradeCell.textContent = "-";
     }
