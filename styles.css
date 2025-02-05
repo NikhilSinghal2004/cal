@@ -1,0 +1,133 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #2b5876, #4e4376);
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Container */
+.container {
+    background: white;
+    padding: 25px;
+    width: 70%;
+    margin: 50px auto;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Title */
+h1 {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background: #2b5876;
+    color: white;
+    font-weight: bold;
+}
+
+/* Input Fields */
+input {
+    width: 80px;
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #2b5876;
+    outline: none;
+}
+
+/* Button Group */
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Buttons */
+button {
+    padding: 12px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Add Button */
+.add-btn {
+    background: #28a745;
+    color: white;
+}
+
+.add-btn:hover {
+    background: #218838;
+}
+
+/* Calculate Button */
+.calc-btn {
+    background: #007bff;
+    color: white;
+}
+
+.calc-btn:hover {
+    background: #0056b3;
+}
+
+/* Remove Button */
+.delete-btn {
+    background: #dc3545;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.delete-btn:hover {
+    background: #b02a37;
+}
+
+/* Result */
+h2 {
+    font-size: 24px;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
