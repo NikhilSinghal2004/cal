@@ -3,35 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GPA Calculator</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Student Helping Hand</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: white;
+            margin-top: 30px;
+            font-size: 36px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .container {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 150px;
+            height: 100px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: black;
+        }
+        .icon:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+        }
+        img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
+    <h1>Student Helping Hand</h1>
     <div class="container">
-        <h1>🎓 GPA Calculator</h1>
-        <table id="subjectsTable">
-            <thead>
-                <tr>
-                    <th>Subject</th>
-                    <th>Marks (out of 100)</th>
-                    <th>Credits</th>
-                    <th>Grade</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Dynamic rows will be added here -->
-            </tbody>
-        </table>
-
-        <div class="btn-group">
-            <button class="add-btn" onclick="addSubject()">➕ Add Subject</button>
-            <button class="calc-btn" onclick="calculateGPA()">📊 Calculate GPA</button>
-        </div>
-        
-        <h2 id="result"></h2>
+        <a href="/gpa.html" class="icon">
+            <p>GPA Calculator</p>
+        </a>
+        <a href="attendance_calculator.html" class="icon">
+            <!-- <img src="attendance_icon.png" alt="Attendance Calculator"> -->
+            <p>Attendance Calculator</p>
+        </a>
+        <a href="marks_calculator.html" class="icon">
+            <!-- <img src="marks_icon.png" alt="Marks Calculator"> -->
+            <p>Marks Calculator</p>
+        </a>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
