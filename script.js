@@ -16,8 +16,8 @@ function deleteRow(button) {
     row.remove();
 }
 
-function getGradePoint(marks) {
-    if (marks >= 90) return 10.0;
+function getGradePoint(marks, credits) {
+    if ((credits === 4 && marks > 85) || (credits !== 4 && marks > 90)) return 10.0;
     if (marks >= 80) return 9.0;
     if (marks >= 70) return 8.0;
     if (marks >= 60) return 7.0;
@@ -64,7 +64,7 @@ function calculateGPA() {
             return;
         }
 
-        let gradePoint = getGradePoint(markValue);
+        let gradePoint = getGradePoint(markValue, creditValue);
         weightedSum += gradePoint * creditValue;
         totalCredits += creditValue;
     }
