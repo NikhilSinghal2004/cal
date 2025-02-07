@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h1>Attendance Calculator</h1>
-        <p>Enter the number of classes per week and the number of weeks in the semester.</p>
+        <p>Enter your class details and desired attendance percentage.</p>
         
         <div class="input-group">
             <label for="classesPerWeek">Classes per Week:</label>
@@ -19,6 +19,11 @@
         <div class="input-group">
             <label for="weeks">Number of Weeks:</label>
             <input type="number" id="weeks" min="1" required>
+        </div>
+
+        <div class="input-group">
+            <label for="desiredPercentage">Desired Attendance (%):</label>
+            <input type="number" id="desiredPercentage" min="1" max="100" required>
         </div>
 
         <button onclick="calculateAttendance()">Calculate</button>
